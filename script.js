@@ -4,7 +4,6 @@ function calculateInterest() {
     let time = parseInt(document.getElementById('time').value);
 
     if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
-        document.getElementById('resultinnerText').value = 0;
         return 0;
     }
 
