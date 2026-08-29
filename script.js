@@ -1,13 +1,13 @@
-// Using parseFloat and parseInt to prevent TypeErrors and properly convert input values to numbers
 function calculateInterest() {
     let principal = parseFloat(document.getElementById('principal').value);
     let rate = Number(document.getElementById('rate').value);
-    let years = parseInt(document.getElementById('years').value);
+    let time = parseInt(document.getElementById('time').value);
 
-    if (isNaN(principal) || isNaN(rate) || isNaN(years)) {
+    if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
+        document.getElementById('resultinnerText').value = 0;
         return 0;
     }
 
-    let interest = (principal * rate * years) / 100;
+    let interest = (principal * rate * time) / 100;
     return interest;
 }
